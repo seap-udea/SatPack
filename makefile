@@ -49,7 +49,7 @@ test:all
 
 commit:
 	@git commit -am "Commit"
-	@git push origin master
+	@git push
 
 pull:
 	@git reset --hard HEAD
