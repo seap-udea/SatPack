@@ -1,31 +1,4 @@
-#-------------------------------------------------------------------------------
-#
-# makefile
-#
-# Purpose:
-#
-#   Linux make file for C++ library and programs of
-#   "O. Montenbruck, E. Gill; Satellite Orbits - Models, Methods, and 
-#   Applications; Springer Verlag (2000)."
-#
-# Notes:
-# 
-#   To build the executable programs, copy all source and header files 
-#   (*.cpp,*.h) as well as this makefile into the working directory:
-#      >tar -xvf /cdrom/SAT/Linux/satsrc.tar
-#      >cp /cdrom/SAT/Linux/makefile .
-#   Then start the make tool:
-#      >make
-#
-# Last modified:
-#
-#   2000/03/04  OMO  Final version (1st edition)
-#   2005/04/14  OMO  Final version (2nd reprint)
-#
-#-------------------------------------------------------------------------------
-
 # Compilation options
-# CXXFLAGS += -Wall -O3 
 CXXFLAGS += -O3 
 
 # The library is:
@@ -73,3 +46,10 @@ test:all
 	./GEODA.out GEODA_A1.inp
 	./RTOD.out RTOD_A.inp
 	./TDRSOD.out 
+
+commit:
+	@git commit -am "Commit"
+	@git push origin master
+
+pull:
+	@git reset --hard HEAD
